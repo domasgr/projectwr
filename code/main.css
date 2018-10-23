@@ -43,7 +43,7 @@ nav ul li{
 
 }
 a{
-	text-decoration: none;
+	text-decoration: none !important;
 	display: block;
 	box-sizing: border-box;
 	height: 100%;
@@ -87,12 +87,23 @@ p{
 	padding-left: 0px;
 	margin-top: 30px;
 }
-
-.card-group{
-	display: flex;
+.container{
+	padding-top: 100px;
 }
+
 .card{
-	flex: 1;
+	background: #a58374;
+	-webkit-box-shadow: 4px -5px 15px -4px rgba(0,0,0,0.75);
+	-moz-box-shadow: 4px -5px 15px -4px rgba(0,0,0,0.75);
+	box-shadow: 4px -5px 15px -4px rgba(0,0,0,0.75);
+}
+.card-text{
+	font-size: 12px;
+}
+
+.btn-primary{
+	background: #c7b299;
+	border-color: #c7b299;
 }
 
 .project{
@@ -103,3 +114,31 @@ p{
 .project-card{
 	padding-top: 100px;
 }
+
+.view-all .btn-primary{
+	margin-top: 100px;
+	margin-left: 30px;
+/*	background: #c7b29900;
+	border-color: #d02192;
+	color: #d02192;
+	font-weight: bold;*/
+}
+.list-group-item {
+	background: #a58374;
+	}
+.list-group-item.active{
+	background: #c7b299;
+	border-color: #a58374;
+}
+/*view-all{
+	height: 100px;
+	
+}*/
+
+/*.view-all .card-text{
+	margin: 0;
+}*/
+/*.view-all .card-body{
+	padding-top: 10px;
+}*/
+
