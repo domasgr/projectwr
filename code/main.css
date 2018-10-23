@@ -1,0 +1,105 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+#first{
+	background: url(../images/header.jpg);
+	background-size: cover;
+	height: 100vh;
+	/*background: yellow;*/
+}
+
+#second{
+	background: #c7b299;
+	height: 100vh;
+}
+
+#third{
+	background: #c7b299;
+	height: 100vh;
+}
+
+nav{
+	height: 50px;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.72);
+	
+	position: fixed;
+	z-index: 1;
+}
+ul{
+	height: 100%;
+	/*padding-top: 15px;*/
+}
+nav ul li{
+	width: 110px;
+	height: 100%;
+	float: right;
+	display: inline-block;
+
+	
+
+
+}
+a{
+	text-decoration: none;
+	display: block;
+	box-sizing: border-box;
+	height: 100%;
+	padding-top: 15px;
+	color: white;
+	text-align: center;
+	}
+
+a:hover{
+	color: white;
+	background-image: linear-gradient(to bottom, rgba(255,255,255, 0.3), rgba(255,255,255, 0));
+
+}
+.active{
+	background-image: linear-gradient(to bottom, rgba(255,255,255, 0.3), rgba(255,255,255, 0));
+}
+
+header{
+	box-sizing: border-box;
+	background-color: rgba(0, 0, 0, 0.72);
+	color: white;
+	position: absolute;
+	right: 0px;
+	top: 180px;
+	height: 180px;
+	width: 600px;
+	padding-top: 20px;
+	padding-left: 20px;
+	}
+
+h1{
+	font-weight: 100;
+	font-size: 60px;
+	
+}
+h2{
+	padding-left: 105px;
+	margin-top: -15px;
+}
+p{
+	padding-left: 0px;
+	margin-top: 30px;
+}
+
+.card-group{
+	display: flex;
+}
+.card{
+	flex: 1;
+}
+
+.project{
+	margin-top: 200px;
+	background: blue;
+}
+
+.project-card{
+	padding-top: 100px;
+}
