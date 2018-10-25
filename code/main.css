@@ -28,6 +28,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c7b299', end
 	height: 100vh;
 }
 
+#fourth{
+	background: #c7b299;
+	height: 100vh;
+}
+
 nav{
 	height: 50px;
 	width: 100%;
