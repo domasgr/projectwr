@@ -48,7 +48,7 @@ $(document).ready(function(){
 	 		if( scrollbarLocation > titleOffset){
 	 			$('header').fadeOut(300);
 	 		} else if( scrollbarLocation < titleOffset){
-	 			$('header').fadeIn();
+	 			$('header').fadeIn(600);
 	 		}
   });
 });
