@@ -21,15 +21,18 @@ background: linear-gradient(to bottom, rgba(199,178,153,1) 0%, rgba(199,178,153,
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c7b299', endColorstr='#623f28', GradientType=0 );*/
 	background: #c7b299;
 	height: 100vh;
+	position: relative;
 }
 
 #third{
-	background: #c7b299;
+	background: #e0d2c6;
+	position: relative;
 	height: 100vh;
 }
 
 #fourth{
-	background: #c7b299;
+	background: #623f28;
+	position: relative;
 	height: 100vh;
 }
 
@@ -86,6 +89,47 @@ header{
 	padding-top: 20px;
 	padding-left: 20px;
 	}
+.bookmark{
+	position: relative;
+	top: 95%;
+	height: 5%;
+	width: 15%;
+	border-radius: 113px 113px 0px 0px;
+	-moz-border-radius: 113px 113px 0px 0px;
+	-webkit-border-radius: 113px 113px 0px 0px;
+	margin: 0 auto;
+	background: #c7b299;
+}
+.bookmark2{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin-right: auto;
+	margin-left: auto;
+	height: 5%;
+	width: 15%;
+	border-radius: 113px 113px 0px 0px;
+	-moz-border-radius: 113px 113px 0px 0px;
+	-webkit-border-radius: 113px 113px 0px 0px;
+	margin: 0 auto;
+	background: #e0d2c6;
+}
+.bookmark3{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin-right: auto;
+	margin-left: auto;
+	height: 5%;
+	width: 15%;
+	border-radius: 113px 113px 0px 0px;
+	-moz-border-radius: 113px 113px 0px 0px;
+	-webkit-border-radius: 113px 113px 0px 0px;
+	margin: 0 auto;
+	background: #623f28;
+}
 
 h1{
 	font-weight: 100;
@@ -147,6 +191,24 @@ p{
 background-color: #efe7dd;
 border-color: #634028;
 color: #634028;
+	}
+
+.about-section-text{
+		background-color: #a583744a;
+		font-size: 60px;
+		height: 100px;
+		margin-bottom: 50px;
+	}
+	.icon{
+		background: url(../images/icon.png);
+		background-size: cover;
+	}
+
+	.info-image{
+		background: black;
+		opacity: 0.5;
+		height: 200px;
+		margin-top: 50px;
 	}
 /*view-all{
 	height: 100px;

@@ -2,7 +2,7 @@ $(document).ready(function(){
 	//variables which is needed from multiple funcstions
 	var scrollLink = $('.scroll');
 	var titleOffset = $('header').offset().top-120;
-	
+	var cardOffset = $('.card').offset().top;
 
 	//navigation scrolling
 	scrollLink.click(function(e){
@@ -46,12 +46,33 @@ $(document).ready(function(){
 	 var scrollbarLocation = $(this).scrollTop();
 	 		
 	 		if( scrollbarLocation > titleOffset){
-	 			$('header').fadeOut(300);
+	 			$('header').fadeOut(350);
 	 		} else if( scrollbarLocation < titleOffset){
 	 			$('header').fadeIn(600);
 	 		}
-  });
+  	});
+
+	// header animation after using navbar
+	$('li a').eq(2).click(function(){
+    $('header').animate({
+	    top: "+=200",
+		opacity: 0}, 650,function(){
+	    	$('header').offset({top: titleOffset+120})
+	    	$('header').css("opacity", "100");
+	    });
+	});
+	// cards animation
+	$('li a').eq(1).click(function(){
+    $('.card').animate({
+	    top: "+=200",
+		opacity: 0.3}, 800,function(){
+	    	$('.card').offset({top: cardOffset})
+	    	$('.card').css("opacity", "100");
+	    });
+	});
+
 });
+
 
 
 
