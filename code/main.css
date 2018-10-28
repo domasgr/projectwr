@@ -92,7 +92,7 @@ header{
 .bookmark{
 	position: relative;
 	top: 95%;
-	height: 5%;
+	height: 10%;
 	width: 15%;
 	border-radius: 113px 113px 0px 0px;
 	-moz-border-radius: 113px 113px 0px 0px;
@@ -169,7 +169,7 @@ p{
 }
 
 .project-card{
-	padding-top: 100px;
+	padding-top: 70px;
 }
 
 .view-all .btn-primary{
@@ -197,7 +197,7 @@ color: #634028;
 		background-color: #a583744a;
 		font-size: 60px;
 		height: 100px;
-		margin-bottom: 50px;
+		margin-bottom: 20px;
 	}
 	.icon{
 		background: url(../images/icon.png);

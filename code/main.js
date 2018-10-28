@@ -3,7 +3,7 @@ $(document).ready(function(){
 	var scrollLink = $('.scroll');
 	var titleOffset = $('header').offset().top-120;
 	var cardOffset = $('.card').offset().top;
-
+	var aboutOffset = $('.about-section-slide').offset().top;
 	//navigation scrolling
 	scrollLink.click(function(e){
 		e.preventDefault();
@@ -70,6 +70,16 @@ $(document).ready(function(){
 	    	$('.card').css("opacity", "100");
 	    });
 	});
+	// about section animation
+	$('li a').eq(0).click(function(){
+    $('div .about-section-slide').animate({
+	    top: "+=300",
+		opacity: 0.3}, 800,function(){
+	    	$('.about-section-slide').offset({top: aboutOffset});
+	    	$('.about-section-slide').css("opacity", "100");
+	    });
+	});
+	
 
 });
 
