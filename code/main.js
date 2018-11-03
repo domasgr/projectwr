@@ -24,22 +24,27 @@ $(document).ready(function(){
 
 	 		if( scrollbarLocation >= homeOffset){
 	 			$('li a').removeClass('active');
-	 			$('li a').eq(3).addClass('active');
+	 			$('li a').eq(0).addClass('active');
 	 		} 
 	 		if( scrollbarLocation >= projectsOffset){
 	 			$('li a').removeClass('active');
-	 			$('li a').eq(2).addClass('active');
+	 			$('li a').eq(1).addClass('active');
 	 		}
 	 		if( scrollbarLocation >= aboutOffset){
 	 			$('li a').removeClass('active');
-	 			$('li a').eq(1).addClass('active');
+	 			$('li a').eq(2).addClass('active');
 	 		}
 	 		if( scrollbarLocation >= contactOffset){
 	 			$('li a').removeClass('active');
-	 			$('li a').eq(0).addClass('active');
+	 			$('li a').eq(3).addClass('active');
 	 		}
 	});
+});
 
+$(document).ready(function(){
+	var titleOffset = $('header').offset().top-120;
+	var cardOffset = $('.card').offset().top;
+	var aboutOffset = $('.about-section-slide').offset().top;
 
 	 // header toggle fading on exit/entry
 	 $(window).scroll(function(){
@@ -53,7 +58,7 @@ $(document).ready(function(){
   	});
 
 	// header animation after using navbar
-	$('li a').eq(2).click(function(){
+	$('li a').eq(1).click(function(){
     $('header').animate({
 	    top: "+=200",
 		opacity: 0}, 650,function(){
@@ -62,7 +67,7 @@ $(document).ready(function(){
 	    });
 	});
 	// cards animation
-	$('li a').eq(1).click(function(){
+	$('li a').eq(2).click(function(){
     $('.card').animate({
 	    top: "+=200",
 		opacity: 0.3}, 800,function(){
@@ -71,16 +76,14 @@ $(document).ready(function(){
 	    });
 	});
 	// about section animation
-	$('li a').eq(0).click(function(){
-    $('div .about-section-slide').animate({
+	$('li a').eq(3).click(function(){
+    $('.about-section-slide').animate({
 	    top: "+=300",
 		opacity: 0.3}, 800,function(){
 	    	$('.about-section-slide').offset({top: aboutOffset});
 	    	$('.about-section-slide').css("opacity", "100");
 	    });
 	});
-	
-
 });
 
 
