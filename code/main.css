@@ -3,23 +3,19 @@
 	margin: 0;
 	font-family: 'Montserrat', sans-serif;
 }
+/* html, body {
+    overflow-x:hidden;
+} */
 
 #first{
 	background: url(../images/header.jpg);
 	background-size: cover;
 	height: 100vh;
+	width: 100%;
 	/*background: yellow;*/
 }
 
 #second{
-/*	background: rgba(199,178,153,1);
-background: -moz-linear-gradient(top, rgba(199,178,153,1) 0%, rgba(199,178,153,1) 54%, rgba(98,63,40,1) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(199,178,153,1)), color-stop(54%, rgba(199,178,153,1)), color-stop(100%, rgba(98,63,40,1)));
-background: -webkit-linear-gradient(top, rgba(199,178,153,1) 0%, rgba(199,178,153,1) 54%, rgba(98,63,40,1) 100%);
-background: -o-linear-gradient(top, rgba(199,178,153,1) 0%, rgba(199,178,153,1) 54%, rgba(98,63,40,1) 100%);
-background: -ms-linear-gradient(top, rgba(199,178,153,1) 0%, rgba(199,178,153,1) 54%, rgba(98,63,40,1) 100%);
-background: linear-gradient(to bottom, rgba(199,178,153,1) 0%, rgba(199,178,153,1) 54%, rgba(98,63,40,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c7b299', endColorstr='#623f28', GradientType=0 );*/
 	background: #c7b299;
 	height: 100vh;
 	position: relative;
@@ -40,16 +36,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c7b299', end
 
 
 /*---------------------------------------------------------------------------------*/
-nav{
-	/* height: 50px;
-	width: 100%; */
-	/* background-color: rgba(0, 0, 0, 0.72); */
-	
-	/* position: fixed; */
-	/* z-index: 1; */
-}
-#navigation{
+#first #navigation{
 	background-color: rgba(0, 0, 0, 0.72);
+	min-width: 300px;
 }
 #navigation .nav-link{
 	color: white;
@@ -65,26 +54,6 @@ nav{
 a.nav-link{
 	padding-top: 12px;
 }
-/* ul{
-	 height: 100%; 
-	padding-top: 15px;
-} */
-/* nav ul li{
-	width: 110px;
-	height: 100%;
-	float: right;
-	display: inline-block;
-
-} */
-/* a{
-	text-decoration: none !important;
-	display: block;
-	box-sizing: border-box;
-	height: 100%;
-	padding-top: 15px;
-	color: white;
-	text-align: center;
-	} */
 
 a:hover{
 	color: white;
@@ -94,12 +63,7 @@ a:hover{
 .active{
 	background-image: linear-gradient(to bottom, rgba(255,255,255, 0.3), rgba(255,255,255, 0));
 }
-
 /*----------------------------------------------------------------------------------------------------------*/
-
-
-
-
 
 
 
@@ -133,7 +97,7 @@ header{
 	right: 0;
 	margin-right: auto;
 	margin-left: auto;
-	height: 5%;
+	height: 35px;
 	width: 15%;
 	border-radius: 113px 113px 0px 0px;
 	-moz-border-radius: 113px 113px 0px 0px;
@@ -157,16 +121,15 @@ header{
 	background: #d0d0d0;
 }
 
-h1{
+#first h1{
 	font-weight: 100;
-	font-size: 60px;
-	
+	font-size: 60px;	
 }
-h2{
+#first h2{
 	padding-left: 105px;
 	margin-top: -15px;
 }
-p{
+#first p{
 	padding-left: 0px;
 	margin-top: 30px;
 }
@@ -221,6 +184,7 @@ color: #634028;
 
 .about-section-text{
 		background-color: #a583744a;
+		overflow: hidden;
 		font-size: 60px;
 		height: 100px;
 		margin-bottom: 20px;
@@ -286,8 +250,8 @@ color: #634028;
 }
 #fourth .footer-text{
 	display: inline-block;
-	width: 500px;
-	margin-left: 50px;
+	width: 70%;
+	margin-left: 0px;
 }
 #first .nav-icon{
 	display: inline-block;
@@ -295,8 +259,55 @@ color: #634028;
 	height: auto;
 	
 }
-/* @media (max-width: 1200px){
-	
-
-	}
-} */
+@media (max-width: 600px){
+		header{
+			width: 100%;
+			top: 218px;
+		}
+		#first h1{
+			width: 250px;	
+		}
+		#first h2{
+			padding-left: 50px;
+			width: 280px;
+		}	
+		#navigation .nav-link {
+			width: 100%;
+		}
+		#second{
+			height: auto;
+		}
+		#second .about-section-text, #third .about-section-text{
+			font-size: 35px;
+		}
+		#second .card{
+			width: 70%;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 20px;
+		}
+		#second div.card.view-all{
+			height: 150px;
+			margin-bottom: 50px;
+		}
+		#second .container, #third .container{
+			padding-top: 60px;
+		}
+		.view-all .btn-primary {
+			margin-top: 0;
+			margin-bottom: 5px;
+		}
+		#second .card-text{
+			height: 35px;
+    		overflow: hidden;
+		}
+		#third{
+			font-size: 12px;
+		}
+		#fourth .contact-section-text{
+			font-size: 35px;
+		}
+		#fourth{
+			height: auto;
+		}
+}
