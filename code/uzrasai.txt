@@ -1,0 +1,9 @@
+1 parasyti gyvnunu programa
+2. Isnagrinrti ir pasinaudoti darbo metodikom kurias naudoja programavimo projektuose
+3. SUsikurit savo Trello lenta ir ten susirasyti darbus
+4. Pagal darbus kurti Git sakas
+5. Darbams sukurti pull request
+6. Isreviewinti kolegos koda
+7. Paabigti projekta
+
+

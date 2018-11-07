@@ -11,6 +11,7 @@
 	background: url(../images/header.jpg);
 	background-size: cover;
 	height: 100vh;
+	position: relative;
 	width: 100%;
 	/*background: yellow;*/
 }
@@ -28,7 +29,7 @@
 }
 
 #fourth{
-	background: #d0d0d0;
+	background: #6b4e2a;
 	position: relative;
 	height: 100vh;
 }
@@ -80,9 +81,13 @@ header{
 	padding-left: 20px;
 	}
 .bookmark{
-	position: relative;
-	top: 95%;
-	height: 10%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin-right: auto;
+	margin-left: auto;
+	height: 35px;
 	width: 15%;
 	border-radius: 113px 113px 0px 0px;
 	-moz-border-radius: 113px 113px 0px 0px;
@@ -112,13 +117,13 @@ header{
 	right: 0;
 	margin-right: auto;
 	margin-left: auto;
-	height: 5%;
+	height: 35px;
 	width: 15%;
 	border-radius: 113px 113px 0px 0px;
 	-moz-border-radius: 113px 113px 0px 0px;
 	-webkit-border-radius: 113px 113px 0px 0px;
 	margin: 0 auto;
-	background: #d0d0d0;
+	background: #6b4e2a;
 }
 
 #first h1{
@@ -309,5 +314,16 @@ color: #634028;
 		}
 		#fourth{
 			height: auto;
+		}
+		.bookmark, .bookmark2, .bookmark3{
+			width: 80px;
+			border-radius: 23px 23px 0px 0px;
+			-moz-border-radius: 23px 23px 0px 0px;
+			-webkit-border-radius: 23px 23px 0px 0px;
+			border: 0px solid #000000;
+			
+			-webkit-box-shadow: 0px -3px 12px -1px rgba(0,0,0,0.75);
+			-moz-box-shadow: 0px -3px 12px -1px rgba(0,0,0,0.75);
+			box-shadow: 0px -3px 12px -1px rgba(0,0,0,0.75);
 		}
 }

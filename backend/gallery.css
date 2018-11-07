@@ -1,0 +1,58 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+body{
+	background: white;
+}
+main{
+	margin-top: 50px;
+}
+nav{
+	height: 50px;
+	background: #6b4e2a;
+	margin-bottom: 20px;
+}
+.nav-icon{
+	display: inline-block;
+	width: 30px;
+	height: auto;
+	
+}
+/*.nav-icon{
+	position: relative;
+	width: 30px;
+	height: auto;	
+}*/
+/*.brand-icon{
+	position: relative;
+	display: inline-block;
+	height: 100%;
+	width:60px;
+}*/
+.page-name{
+	display: inline-block;
+	height: 100%;
+	width: 250px;
+	padding-top: 10px;
+	margin-left: 50px;
+}
+.page-name p{
+	font-size: 1.2rem;
+	color: white;
+	margin-bottom: 0;
+}
+p.card-text{
+	height: 1.5rem;
+	font-size: 0.8rem;
+	overflow: hidden;
+}
+/*div.card-body{
+	height: 100px;
+}
+*/
+.card{
+	width: 230px;
+	margin-bottom: 10px;
+}
