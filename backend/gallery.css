@@ -13,6 +13,9 @@ nav{
 	height: 50px;
 	background: #6b4e2a;
 	margin-bottom: 20px;
+	-webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
 }
 .nav-icon{
 	display: inline-block;
@@ -55,6 +58,9 @@ p.card-text{
 .card{
 	width: 230px;
 	margin-bottom: 10px;
+	-webkit-box-shadow: 0px 2px 11px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 2px 11px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 2px 11px 0px rgba(0,0,0,0.75);
 }
 /* img.img-fluid{
 	margin-left: auto;
@@ -63,17 +69,24 @@ p.card-text{
 } */
 div.carousel{
 	width: 60%;
-	
+
 }
 .carousel-background{
 	background: rgba(255,255,255,1);
 background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 35%, rgba(0,0,0,1) 65%, rgba(255,255,255,1) 100%);
-background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(35%, rgba(0,0,0,1)), color-stop(65%, rgba(0,0,0,1)), color-stop(100%, rgba(255,255,255,1)));
+
 background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 35%, rgba(0,0,0,1) 65%, rgba(255,255,255,1) 100%);
 background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 35%, rgba(0,0,0,1) 65%, rgba(255,255,255,1) 100%);
 background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 35%, rgba(0,0,0,1) 65%, rgba(255,255,255,1) 100%);
 background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 35%, rgba(0,0,0,1) 65%, rgba(255,255,255,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
+
+	-webkit-box-shadow: 1px 10px 16px -9px rgba(0,0,0,0.75);
+	-moz-box-shadow: 1px 10px 16px -9px rgba(0,0,0,0.75);
+	box-shadow: 1px 10px 16px -9px rgba(0,0,0,0.75);
+
+
+
 }
 div.info{
 	background: #f8f8f8;
@@ -86,11 +99,37 @@ p.project-text{
 }
 
 h3.image-title{
-	padding-top: 10px;
-	padding-left: 30px;
+	padding-top: 15px;
+	text-align: center;
 }
-.review1, .review2, .review3{
-	height: 112px;
-	background: grey;
+/*.review1, .review2, .review3{*/
+	/*!*height: 112px;*!*/
+	/*!*background: grey;*!*/
+	/*overflow: hidden;*/
+/*}*/
+/*.row{*/
+	/*overflow: hidden;*/
+/*}*/
+/*.row {*/
+	/*display: table;*/
+/*}*/
+
+/*.row [class*="col-md-3"] {*/
+	/*float: none;*/
+	/*display: table-cell;*/
+	/*vertical-align: top;*/
+/*}*/
+div.col-md-3.info{
+	height: 300px;
+}
+div.row.preview{
+	height: 33%;
 	overflow: hidden;
+}
+
+img.preview-image{
+	height: 150px;
+	/*max-width:100%;*/
+	/*max-height:100%;*/
+	object-fit: fill;
 }

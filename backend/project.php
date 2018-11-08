@@ -39,19 +39,22 @@ $row = mysqli_fetch_assoc($res);
                         <input class="btn btn-danger" type="submit" name="submitDelete" value="delete">
                     </form>';
                      }?>
-                     <div class="review1"><img src="<?php echo $row['image']?>"></div>
-                     <div class="review2"><img src="<?php echo $row['image']?>"></div>
-                     <div class="review3"><img src="<?php echo $row['image']?>"></div>
+                    <div class="row preview">
+                        <div class="col">
+                            <img class="preview-image mx-auto d-block" src="<?php echo $row['image']?>">
+                        </div>
+                    </div>
+                    <div class="row preview">
+                        <div class="col">
+                            <img class="preview-image mx-auto d-block" src="<?php echo $row['image']?>">
+                        </div>
+                    </div>
+                    <div class="row preview">
+                        <div class="col">
+                            <img class="preview-image mx-auto d-block" src="<?php echo $row['image']?>">
+                        </div>
+                    </div>
 
-                     <div class="side-info my-auto d-block">
-                        <ul class="list-group mt-5">
-                            <li class="list-group-item">Date 2018/10/21</li>
-                            <li class="list-group-item">Dapibus ac facilisis in</li>
-                            <li class="list-group-item">Morbi leo risus</li>
-                            <li class="list-group-item">Porta ac consectetur ac</li>
-                            <li class="list-group-item">Vestibulum at eros</li>
-                        </ul>
-                     </div>
                 </div>
 
                 <div class="col-md-9">
@@ -83,10 +86,33 @@ $row = mysqli_fetch_assoc($res);
                             </a>
                         </div>
                     </div>
+
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="side-info my-auto d-block">
+                        <ul class="list-group mt-5">
+                            <li class="list-group-item">Date 2018/10/21</li>
+                            <li class="list-group-item">Dapibus ac facilisis in</li>
+                            <li class="list-group-item">Morbi leo risus</li>
+                            <li class="list-group-item">Porta ac consectetur ac</li>
+                            <li class="list-group-item">Vestibulum at eros</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-9">
                     <h3 class="image-title"><?php echo $row['title'] ?></h3>
                     <p class="project-text"><?php echo $row['text'] ?> </p>
                 </div>
             </div>
+
+
+
+
     </div>
 </main>
 
@@ -101,3 +127,5 @@ $row = mysqli_fetch_assoc($res);
 
 
 <?php include "./partials/footer.php"?>
+
+
