@@ -1,3 +1,7 @@
+<?php
+if(iss)
+session_start()
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,13 +24,19 @@
             <li class="nav-item"><a href="/backend/gallery.php" class="nav-link scroll">Gallery</a></li>
         </ul>
         <ul class="navbar-nav">
-            <li class="nav-item"><a href="/backend/new.php" class="nav-link scroll">Add new</a></li>
+            <?php if(isset($_SESSION['id'])){
+            echo '<li class="nav-item"><a href="/backend/new.php" class="nav-link scroll">Add new</a></li>';
+            }?>
             <!-- <li class="nav-item"><a href="#third" class="nav-link scroll">ABOUT</a></li>
             <li class="nav-item"><a href="#fourth" class="nav-link scroll">CONTACT</a></li> -->
         </ul>
         <ul class="navbar-nav">
-            <li class="nav-item"><a href="#first" class="nav-link scroll">Log in</a></li>
-            <li class="nav-item"><a href="#second" class="nav-link scroll">Sign up</a></li>
+            <?php if(isset($_SESSION['id'])){
+                echo "<li class='nav-item'><a href='#' class='nav-link'>Welcome back, Lina</a></li>";
+            }?>
+            <?php if(isset($_SESSION['id'])){
+            echo "<li class='nav-item'><a href='/backend/logout.php' class='nav-link scroll'>Log out</a></li>";
+            } else{ echo "<li class='nav-item'><a href='/backend/login.php' class='nav-link scroll'>Log in</a></li>";}?>
         </ul>
     </div>
 </nav>

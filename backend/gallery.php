@@ -3,6 +3,7 @@
 <?php include "../mysql_connect.php"?>
 <?php
 
+//  POST detection, INSERT action in db
 if(isset($_POST['submit'])) {
     $title = $_POST["title"];
     $image = $_POST["image"];
@@ -17,12 +18,17 @@ if(isset($_POST['submit'])) {
         mysqli_stmt_execute($stmt);
     }
 }
-
+// DELETE detection, DELETE action in db
 if(isset($_REQUEST['action']) &&  $_REQUEST['action'] == "DELETE"){
     $delId = $_REQUEST['id'];
     $sqlDel = "DELETE FROM `project` WHERE `project`.`id` = '$delId';";
     mysqli_query($db, $sqlDel);
 }
+
+ //LOGIN detection
+
+
+
 
 
 

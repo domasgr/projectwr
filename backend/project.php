@@ -1,4 +1,4 @@
-<?php include_once __DIR__."./partials/header.php"?>
+<?php include "./partials/header.php"?>
 <?php include "../mysql_connect.php"?>
 
 
@@ -30,13 +30,15 @@ $row = mysqli_fetch_assoc($res);
 
             <div class="row">
                 <div class="col-md-3">
-                    <h3> TOOLS</h3>
+                     <?php if(isset($_SESSION['id'])) {
+                         echo '<h3> TOOLS</h3>';
 
-                    <a href="/backend/edit.php?id=<?php echo $project_id ?>" class="btn btn-primary">Edit</a>
+                         echo '<a href="/backend/edit.php?id='.$project_id.'" class="btn btn-primary">Edit</a>';
 
-                    <form action="/backend/gallery.php?id=<?php echo $project_id ?>&action=DELETE" method="POST">
+                         echo '<form action="/backend/gallery.php?id='.$project_id.'&action=DELETE" method="POST">
                         <input class="btn btn-danger" type="submit" name="submitDelete" value="delete">
-                    </form>
+                    </form>';
+                     }?>
                 </div>
 
                 <div class="col-md-9">
