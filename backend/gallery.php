@@ -8,8 +8,14 @@ if(isset($_POST['submit'])) {
     $image = $_POST["image"];
     $text = $_POST["text"];
 
-    $sqlIns = "INSERT INTO project (id, title, image, text) VALUES (NULL, '$title', '$image', '$text');";
-    mysqli_query($db, $sqlIns);
+    $sqlIns = "INSERT INTO project (title, image, text) VALUES (?, ?, ?);";
+    $stmt = mysqli_stmt_init($db);
+    if(!mysqli_stmt_prepare($stmt, $sqlIns)){
+        echo "SQL ERROR";
+    } else{
+        mysqli_stmt_bind_param($stmt, "sss", $title, $image, $text);
+        mysqli_stmt_execute($stmt);
+    }
 }
 
 if(isset($_REQUEST['action']) &&  $_REQUEST['action'] == "DELETE"){

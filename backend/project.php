@@ -8,8 +8,14 @@ if(isset($_POST['submitEdit'])){
     $title = $_POST['title'];
     $image = $_POST['image'];
     $text = $_POST['text'];
-    $sql = "UPDATE `project` SET `title` = '$title', `image` = '$image', `text` = '$text' WHERE `project`.`id` = '$project_id';";
-    mysqli_query($db, $sql);
+    $sql = "UPDATE `project` SET `title` = ?, `image` = ?, `text` = ? WHERE `project`.`id` = '$project_id';";
+    $stmt = mysqli_stmt_init($db);
+    if(!mysqli_stmt_prepare($stmt, $sql)){
+        echo "SQL ERROR";
+    } else{
+        mysqli_stmt_bind_param($stmt, "sss", $title, $image, $text);
+        mysqli_stmt_execute($stmt);
+    }
 }
 
 $sql = "SELECT * FROM `project` WHERE `id`='$project_id';";
