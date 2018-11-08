@@ -46,7 +46,7 @@ $res = mysqli_query($db, $sql);
 						<img class="card-img-top" src="<?php echo $row['image']?>">
 						<div class="card-body">
 							<h5 class="card-title"><?php echo $row['title']?></h5>
-                            <p class="card-text"><?php echo $row['text']?></p>
+                            <p class="card-text text-truncate"><?php echo $row['text']?></p>
 							<a href="/backend/project.php?id=<?php echo $row['id']?>" class="btn btn-primary">Read more</a>
 						</div>
 					</div>	

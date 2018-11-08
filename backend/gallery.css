@@ -56,3 +56,41 @@ p.card-text{
 	width: 230px;
 	margin-bottom: 10px;
 }
+/* img.img-fluid{
+	margin-left: auto;
+	margin-right: auto;
+	
+} */
+div.carousel{
+	width: 60%;
+	
+}
+.carousel-background{
+	background: rgba(255,255,255,1);
+background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 35%, rgba(0,0,0,1) 65%, rgba(255,255,255,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(35%, rgba(0,0,0,1)), color-stop(65%, rgba(0,0,0,1)), color-stop(100%, rgba(255,255,255,1)));
+background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 35%, rgba(0,0,0,1) 65%, rgba(255,255,255,1) 100%);
+background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 35%, rgba(0,0,0,1) 65%, rgba(255,255,255,1) 100%);
+background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 35%, rgba(0,0,0,1) 65%, rgba(255,255,255,1) 100%);
+background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 35%, rgba(0,0,0,1) 65%, rgba(255,255,255,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
+}
+div.info{
+	background: #f8f8f8;
+	
+}
+
+p.project-text{
+	padding: 15px;
+	text-align: justify;
+}
+
+h3.image-title{
+	padding-top: 10px;
+	padding-left: 30px;
+}
+.review1, .review2, .review3{
+	height: 112px;
+	background: grey;
+	overflow: hidden;
+}
