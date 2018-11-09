@@ -27,33 +27,25 @@ $row = mysqli_fetch_assoc($res);
 
 <main>
     <div class="container">
-
             <div class="row">
                 <div class="col-md-3 info">
-                     <?php if(isset($_SESSION['id'])) {
-                         echo '<h3> TOOLS</h3>';
 
-                         echo '<a href="/backend/edit.php?id='.$project_id.'" class="btn btn-primary">Edit</a>';
+                    <div class="row preview">
+                        <div class="col">
+                            <img class="preview-image mx-auto d-block" src="<?php echo $row['image']?>">
+                        </div>
+                    </div>
+                    <div class="row preview">
+                        <div class="col">
+                            <img class="preview-image mx-auto d-block" src="<?php echo $row['image']?>">
+                        </div>
+                    </div>
+                    <div class="row preview">
+                        <div class="col">
+                            <img class="preview-image mx-auto d-block" src="<?php echo $row['image']?>">
+                        </div>
+                    </div>
 
-                         echo '<form action="/backend/gallery.php?id='.$project_id.'&action=DELETE" method="POST">
-                        <input class="btn btn-danger" type="submit" name="submitDelete" value="delete">
-                    </form>';
-                     }?>
-                    <div class="row preview">
-                        <div class="col">
-                            <img class="preview-image mx-auto d-block" src="<?php echo $row['image']?>">
-                        </div>
-                    </div>
-                    <div class="row preview">
-                        <div class="col">
-                            <img class="preview-image mx-auto d-block" src="<?php echo $row['image']?>">
-                        </div>
-                    </div>
-                    <div class="row preview">
-                        <div class="col">
-                            <img class="preview-image mx-auto d-block" src="<?php echo $row['image']?>">
-                        </div>
-                    </div>
 
                 </div>
 
@@ -93,19 +85,35 @@ $row = mysqli_fetch_assoc($res);
 
             <div class="row">
                 <div class="col-md-3">
+                    <?php if(isset($_SESSION['id'])) {
+                        echo '<div class="dropdown">';
+                        echo '<a class="btn btn-info dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Action    <i class="fas fa-cog"></i>
+                        </a>';
+
+                        echo '<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">';
+                        echo '<a class="dropdown-item" href="/backend/edit.php?id='.$project_id.'">Edit</a>';
+                        echo '<form action="/backend/gallery.php?id='.$project_id.'&action=DELETE" method="POST">
+                                  <input class="dropdown-item" type="submit" name="submitDelete" value="Delete">
+                                  </form>';
+                        //echo '<a class="dropdown-item" href="#">Something else here</a>';
+                        echo '</div>';
+                        echo '</div>';
+                    }?>
                     <div class="side-info my-auto d-block">
                         <ul class="list-group mt-5">
-                            <li class="list-group-item">Date 2018/10/21</li>
-                            <li class="list-group-item">Dapibus ac facilisis in</li>
-                            <li class="list-group-item">Morbi leo risus</li>
-                            <li class="list-group-item">Porta ac consectetur ac</li>
-                            <li class="list-group-item">Vestibulum at eros</li>
+                            <li class="list-group-item"><strong>Date </strong><span class="text-light bg-secondary">2018/10/21</span></li>
+                            <li class="list-group-item"><strong>Dapibus ac </strong> <span class="text-light bg-secondary">facilisis in</span></li>
+                            <li class="list-group-item"><strong>Morbi </strong> <span class="text-light bg-secondary">leo risus</span></li>
+                            <li class="list-group-item"><strong>Porta ac </strong> <span class="text-light bg-secondary">consectetur ac</span></li>
+                            <li class="list-group-item"><strong>Vestibulum </strong> <span class="text-light bg-secondary">at eros</span></li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="col-md-9">
                     <h3 class="image-title"><?php echo $row['title'] ?></h3>
+                    <p><em>By Adiela Bameler</em></p>
                     <p class="project-text"><?php echo $row['text'] ?> </p>
                 </div>
             </div>

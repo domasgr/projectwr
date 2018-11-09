@@ -13,7 +13,7 @@
 
             <div class="form-group">
                 <label for="newimage">Image</label>
-                <input type="text" name="image" class="form-control" id="newimage" required value="https://images.pexels.com/photos/935875/pexels-photo-935875.jpeg?auto=compress&cs=tinysrgb&h=350">
+                <input type="file" name="image" class="form-control-file" id="newimage" required multiple>
             </div>
 
             <div class="form-group">
