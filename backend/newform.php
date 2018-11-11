@@ -4,28 +4,26 @@
     <main>
         <div class="container">
             <div class="row fotospreview">
-                <div class="col-md-3 info addform">
+                <div class="col-md-2 info addform">
 
                     <div class="row preview">
-                        <div class="col">
-                            <img class="preview-image mx-auto d-block" src="https://images.pexels.com/photos/935875/pexels-photo-935875.jpeg?auto=compress&cs=tinysrgb&h=350">
+                        <div class="col" style="background-image: url(https://images.pexels.com/photos/935875/pexels-photo-935875.jpeg?auto=compress&cs=tinysrgb&h=350)">
                         </div>
                     </div>
                     <div class="row preview">
-                        <div class="col">
-                            <img class="preview-image mx-auto d-block" src="https://images.pexels.com/photos/935875/pexels-photo-935875.jpeg?auto=compress&cs=tinysrgb&h=350">
+                        <div class="col" style="background-image: url(https://images.pexels.com/photos/935875/pexels-photo-935875.jpeg?auto=compress&cs=tinysrgb&h=350)">
                         </div>
                     </div>
                     <div class="row preview">
-                        <div class="col">
-                            <img class="preview-image mx-auto d-block" src="https://images.pexels.com/photos/935875/pexels-photo-935875.jpeg?auto=compress&cs=tinysrgb&h=350">
+                        <div class="col" style="background-image: url(https://images.pexels.com/photos/935875/pexels-photo-935875.jpeg?auto=compress&cs=tinysrgb&h=350)">
                         </div>
                     </div>
+
 
 
                 </div>
 
-                <div class="col-md-9">
+                <div class="col-md-10">
                     <div class="carousel-background addform">
                         <div id="carouselExampleIndicators" class="carousel addform slide mx-auto" data-ride="carousel">
                             <ol class="carousel-indicators">
@@ -59,20 +57,24 @@
             </div>
 
 
-            <form class="addform" action="/backend/gallery.php" method="POST">
+            <form class="addform" action="/backend/gallery.php" method="POST" enctype="multipart/form-data">
                 <div class="row">
-                    <div class="col-md-3">
-                        <input type="file" name="image" class="form-control-file mb-5" id="newimage" value="Add photos" multiple>
-                        <input type="text" class="form-control" placeholder="Date">
-                        <input type="text" class="form-control" placeholder="Work type">
-                        <input type="text" class="form-control" placeholder="Time spent">
-                        <input type="text" class="form-control" placeholder="Additional info">
-                        <input type="text" class="form-control" placeholder="Additional info">
-                        <input type="text" class="form-control" placeholder="Additional info">
+                    <div class="col-md-2">
+                        <input type="file" name="images[]" class="form-control-file mb-4">
+                        <input type="file" name="images[]" class="form-control-file mb-4">
+                        <input type="file" name="images[]" class="form-control-file mb-4">
+                        <input type="text" name="date" class="form-control" placeholder="Date">
+                        <input type="text" name="type" class="form-control" placeholder="Work type">
+                        <input type="text" name="timespent" class="form-control" placeholder="Time spent">
+
+<!--                        <input type="text" class="form-control" placeholder="Additional info">-->
+<!--                        <input type="text" class="form-control" placeholder="Additional info">-->
+<!--                        <input type="text" class="form-control" placeholder="Additional info">-->
+
                         <input type="submit" name="submit" class="btn btn-success mt-3" value="Create project">
 
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-md-10">
                         <input type="text" name="title" class="form-control" id="newtitle" placeholder="Project title" required>
                         <textarea name="text" class="form-control mt-2" id="newtext" rows="14" placeholder="Text" required></textarea>
                     </div>
