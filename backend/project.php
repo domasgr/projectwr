@@ -89,15 +89,15 @@ $row = mysqli_fetch_assoc($res);
                 <div class="col-md-2 info">
 
                     <div class="row preview">
-                        <div class="col" style="background-image: url(uploads/<?php echo $row['image1']?>)">
+                        <div class="col" style="background-image: url(uploads/<?php echo $row['image1']?>); background-size: cover;">
                         </div>
                     </div>
                     <div class="row preview">
-                        <div class="col" style="background-image: url(uploads/<?php echo $row['image2']?>)">
+                        <div class="col" style="background-image: url(uploads/<?php echo $row['image2']?>); background-size: cover;">
                         </div>
                     </div>
                     <div class="row preview">
-                        <div class="col" style="background-image: url(uploads/<?php echo $row['image3']?>)">
+                        <div class="col" style="background-image: url(uploads/<?php echo $row['image3']?>); background-size: cover;">
                         </div>
                     </div>
 

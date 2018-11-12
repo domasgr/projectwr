@@ -21,7 +21,7 @@ session_start()
 
     <div class="collapse navbar-collapse justify-content-between" id="navLinks">
         <ul class="navbar-nav">
-            <li class="nav-item"><a href="#" class="nav-link scroll">Home</a></li>
+            <li class="nav-item"><a href="../frontend/main.html" class="nav-link scroll">Home</a></li>
             <li class="nav-item"><a href="/backend/gallery.php" class="nav-link scroll">Gallery</a></li>
         </ul>
         <ul class="navbar-nav">

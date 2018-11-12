@@ -49,10 +49,6 @@ if(isset($_POST['submit'])) {
             } else {
                 $img_dir = "uploads/" . $file_array[$i]['name'];
                 move_uploaded_file($file_array[$i]['tmp_name'], $img_dir);
-                ?>
-                <div class="alert alert-succes">
-                    <?php echo "Files uploaded succesfully!";
-                    ?></div> <?php
             }
         }
     }
