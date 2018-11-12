@@ -95,7 +95,11 @@ $sql = "SELECT * FROM projectf;";
 $res = mysqli_query($db, $sql);
 ?>
 	<main>
-
+<a href="../frontend/main.html"><div class="backToHome">
+                <div class="homelink">
+                    <h1><i class="fas fa-home"></i></h1>
+                </div>
+            </div></a>
 		<div class="container">
 			<div class="row">
                 <?php while($row = mysqli_fetch_assoc($res)): ?>

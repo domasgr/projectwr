@@ -179,3 +179,30 @@ div.col-md-2.info.addform{
 .container.login{
 	margin-top: 180px;
 }
+@media (min-width: 1200px) {
+	div.backToHome {
+		width: 120px;
+		height: 100vh;
+		background: url(../images/header.jpg);
+
+		background-size: cover ;
+		background-position: 25% center;
+		opacity: .5;
+		position: absolute;
+		top: 0;
+		transition: 0.5s ease;
+
+	}
+	div.backToHome:hover {
+		opacity: 1;
+	}
+	div.homelink{
+		margin-top: 540px;
+		color: black;
+		text-align: center;
+
+		opacity: 1;
+		font-size: 100px;
+
+	}
+}

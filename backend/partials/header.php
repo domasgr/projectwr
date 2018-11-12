@@ -1,5 +1,5 @@
 <?php
-if(iss)
+//if(iss)
 session_start()
 ?>
 <!DOCTYPE html>
