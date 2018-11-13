@@ -84,6 +84,11 @@ $row = mysqli_fetch_assoc($res);
 
 
 <main>
+    <a href="../frontend/main.php#second"><div class="backToHome">
+            <div class="homelink">
+                <h1><i class="fas fa-arrow-left"></i></h1>
+            </div>
+        </div></a>
     <div class="container">
             <div class="row">
                 <div class="col-md-2 info">

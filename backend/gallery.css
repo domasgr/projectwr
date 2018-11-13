@@ -7,7 +7,7 @@ body{
 	background :#f5f5f5;
 }
 main{
-	margin-top: 50px;
+	margin-top: 70px;
 }
 nav{
 	height: 50px;
@@ -50,6 +50,7 @@ p.card-text{
 	height: 1.5rem;
 	font-size: 0.8rem;
 	overflow: hidden;
+	margin-bottom: 5px;
 }
 /*div.card-body{
 	height: 100px;
@@ -143,6 +144,9 @@ img.preview-image{
 	/*max-height:100%;*/
 	/*object-fit: fill;*/
 }
+.card-img-top {
+	height: 152px;
+}
 
 div.dropdown{
 	padding-left: 20px;
@@ -179,6 +183,9 @@ div.col-md-2.info.addform{
 .container.login{
 	margin-top: 180px;
 }
+i.fas.fa-home{
+	display: none;
+}
 @media (min-width: 1200px) {
 	div.backToHome {
 		width: 120px;
@@ -190,8 +197,11 @@ div.col-md-2.info.addform{
 		opacity: .5;
 		position: absolute;
 		top: 0;
-		transition: 0.5s ease;
+		transition: 1.5s ease;
 
+	}
+	div.backToHome:active{
+		background-position: 0% center;
 	}
 	div.backToHome:hover {
 		opacity: 1;
@@ -205,4 +215,8 @@ div.col-md-2.info.addform{
 		font-size: 100px;
 
 	}
+	i.fas.fa-home{
+		display: block;
+	}
 }
+

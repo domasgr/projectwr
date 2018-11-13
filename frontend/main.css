@@ -150,6 +150,11 @@ header{
 }
 .card-text{
 	font-size: 12px;
+    overflow: hidden;
+    height: 32px;
+}
+.card-img-top{
+    height: 152px;
 }
 
 .btn-primary{

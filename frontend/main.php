@@ -1,3 +1,11 @@
+<?php include "../mysql_connect.php"?>
+
+
+<?php $sql = "SELECT * FROM projectf;";
+$res = mysqli_query($db, $sql);
+$count = 0;
+
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -18,6 +26,9 @@
 			</button>
 
 			<div class="collapse navbar-collapse justify-content-end" id="navLinks">
+<!--                <ul class="navbar-nav">-->
+<!--                    <li class="nav-item"><a href="#first" class="nav-link scroll active">GALLERY</a></li>-->
+<!--                </ul>-->
 				<ul class="navbar-nav">
 					<li class="nav-item"><a href="#first" class="nav-link scroll active">HOME</a></li>
 					<li class="nav-item"><a href="#second" class="nav-link scroll">PROJECTS</a></li>
@@ -28,9 +39,12 @@
 		</nav>
 
 		<header>
-			<h1><span class="icon">W</span>OOD</h1>
-			<h2>RESTORATION</h2>
-			<p>Give your wood a new life</p>
+            <div>
+                <h1><span class="icon">W</span>OOD</h1>
+                <h2>RESTORATION</h2>
+                <p>Give your wood a new life</p>
+            </div>
+
 		</header>
 		<div class="bookmark"></div>
 	</div>
@@ -39,41 +53,44 @@
 		<div class="container project-card">
 			<div class="about-section-text">Our handmade wood solutions</div>
 				<div class="row align-items-center">
-					<div class="col-md-6 col-lg-3 col-sm-12">
-						<div class="card mb-5">
-							<img class="card-img-top" src="https://images.pexels.com/photos/935875/pexels-photo-935875.jpeg?auto=compress&cs=tinysrgb&h=350">
-							<div class="card-body">
-								<h5 class="card-title">Card title</h5>
-								<p class="card-text"> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore </p>
-								<a href="#" class="btn btn-primary">Read more</a>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-6 col-lg-3 col-sm-12">
-						<div class="card mb-5">
-							<img class="card-img-top" src="https://images.pexels.com/photos/935875/pexels-photo-935875.jpeg?auto=compress&cs=tinysrgb&h=350">
-							<div class="card-body">
-								<h5 class="card-title">Card title</h5>
-								<p class="card-text">ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore</p>
-								<a href="#" class="btn btn-primary">Read more</a>
-							</div>
-						</div>
-					</div>
+                    <?php while($row = mysqli_fetch_assoc($res)): ?>
+                        <?php if($count<3){?>
+                            <div class="col-md-6 col-lg-3 col-sm-12">
+                                <div class="card mb-5">
+                                    <img class="card-img-top" src="../backend/uploads/<?php echo $row['image1']?>">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><?php echo $row['title']?></h5>
+                                        <p class="card-text"> <?php echo $row['text'] ?> </p>
+                                        <a href="../backend/project.php?id=<?php echo $row['id'] ?>" class="btn btn-primary">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php $count++; }?>
 
-					<div class="col-md-6 col-lg-3 col-sm-12">	
-						<div class="card mb-5">
-							<img class="card-img-top" src="https://images.pexels.com/photos/935875/pexels-photo-935875.jpeg?auto=compress&cs=tinysrgb&h=350">
-							<div class="card-body">
-								<h5 class="card-title">Card title</h5>
-								<p class="card-text">ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore</p>
-								<a href="#" class="btn btn-primary">Read more</a>
-							</div>
-						</div>
-					</div>
+                    <?php endwhile; ?>
+<!--					<div class="col-md-6 col-lg-3 col-sm-12">-->
+<!--						<div class="card mb-5">-->
+<!--							<img class="card-img-top" src="https://images.pexels.com/photos/935875/pexels-photo-935875.jpeg?auto=compress&cs=tinysrgb&h=350">-->
+<!--							<div class="card-body">-->
+<!--								<h5 class="card-title">Card title</h5>-->
+<!--								<p class="card-text">ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod-->
+<!--								tempor incididunt ut labore et dolore</p>-->
+<!--								<a href="#" class="btn btn-primary">Read more</a>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
+<!---->
+<!--					<div class="col-md-6 col-lg-3 col-sm-12">	-->
+<!--						<div class="card mb-5">-->
+<!--							<img class="card-img-top" src="https://images.pexels.com/photos/935875/pexels-photo-935875.jpeg?auto=compress&cs=tinysrgb&h=350">-->
+<!--							<div class="card-body">-->
+<!--								<h5 class="card-title">Card title</h5>-->
+<!--								<p class="card-text">ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod-->
+<!--								tempor incididunt ut labore et dolore</p>-->
+<!--								<a href="#" class="btn btn-primary">Read more</a>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
 
 					<div class="col-md-6 col-lg-3 col-sm-12">	
 						<div class="card view-all mb-5">

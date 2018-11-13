@@ -4,7 +4,7 @@ $db = new mysqli('localhost', 'root', 'root', 'projects');
 if($db->connect_errno != 0){
     die("Error in DB connection $db->connect_error");
 } else{
-    echo ("Yes connected!\n");
+//    echo ("Yes connected!\n");
 }
 
 ?>
